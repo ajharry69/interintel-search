@@ -249,3 +249,5 @@ commands documented as follows:
 
 1. **Initialize terraform**: `terraform -chdir=./deploy/ init`.
 2. **Provision and configure infrastructure**: `terraform -chdir=./deploy/ apply -auto-approve`.
+
+![sample terraform run output](screenshots/sample-terraform-run-output.png "Sample terraform run output")
