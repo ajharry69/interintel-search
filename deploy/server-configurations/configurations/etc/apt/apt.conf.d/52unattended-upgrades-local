@@ -1,0 +1,9 @@
+// Only perform unattended upgrades for security updates
+Unattended-Upgrade::Allowed-Origins {
+	"${distro_id}:${distro_codename}-security";
+};
+
+Unattended-Upgrade::MinimalSteps "true";
+Unattended-Upgrade::MailOnlyOnError "true";
+Unattended-Upgrade::Automatic-Reboot "true";
+Unattended-Upgrade::Automatic-Reboot-Time "02:00";

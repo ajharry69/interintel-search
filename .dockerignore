@@ -1,0 +1,7 @@
+*
+
+!interintel/
+interintel/settings/local.py
+!docker-entrypoint.sh
+!requirements.txt
+!manage.py

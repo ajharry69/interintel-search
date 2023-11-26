@@ -1,0 +1,30 @@
+version: "3"
+
+services:
+  web:
+    depends_on:
+      db:
+        condition: service_started
+    build:
+      context: .
+#    image: ajharry69/interintel:v1.1.1
+    container_name: interintel_web
+    volumes:
+      - "./public:/app/public"
+    environment:
+      SECRET_KEY: "YRc/yNN/BpF0O0Y3Aw9vbzhFi4iVCCoYmBi/gUJxRnx/fxQY68C6TWdrYM7rNZ65"
+      ALLOWED_HOST: "*"
+      DB_HOST: db
+      DB_USER: "${POSTGRES_USER:-postgres}"
+      DB_PASSWORD: "${POSTGRES_PASSWORD:-p@ssw0rd1}"
+      DB_NAME: "${POSTGRES_DB:-interintel}"
+    ports:
+      - "8001:8000"
+  db:
+    image: postgres:15.5-alpine
+    container_name: interintel_db
+    hostname: interintel_db
+    environment:
+      POSTGRES_USER: "${POSTGRES_USER:-postgres}"
+      POSTGRES_PASSWORD: "${POSTGRES_PASSWORD:-p@ssw0rd1}"
+      POSTGRES_DB: "${POSTGRES_DB:-interintel}"
