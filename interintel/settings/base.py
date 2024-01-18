@@ -3,7 +3,7 @@ from pathlib import Path
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-ALLOWED_HOSTS = ["interintel.xently.co.ke"]
+ALLOWED_HOSTS = ["interintel.xently.co.ke", "interintel-search-production.up.railway.app"]
 
 # Application definition
 
