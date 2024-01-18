@@ -12,7 +12,7 @@ RUN apk -U upgrade && \
     pip install --no-cache-dir -Ur requirements.txt && \
     apk del gcc musl-dev python3-dev libffi-dev openssl-dev cargo
 
-VOLUME ["/app/public/"]
+#VOLUME ["/app/public/"]
 
 EXPOSE 8000
 
