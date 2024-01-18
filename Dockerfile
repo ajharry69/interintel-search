@@ -14,6 +14,8 @@ RUN apk -U upgrade && \
 
 #VOLUME ["/app/public/"]
 
-EXPOSE 8000
+ENV PORT=8000
+
+EXPOSE $PORT
 
 ENTRYPOINT ["./docker-entrypoint.sh"]
