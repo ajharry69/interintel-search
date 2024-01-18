@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/sh -e
 
 cpu_count=$(grep -c processor /proc/cpuinfo)
 # https://docs.gunicorn.org/en/latest/design.html#how-many-workers
