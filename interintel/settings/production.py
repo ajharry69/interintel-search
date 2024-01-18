@@ -15,5 +15,6 @@ DATABASES = {
         "USER": environ.setdefault("DB_USER", "postgres"),
         "PASSWORD": environ.setdefault("DB_PASSWORD", ""),
         "HOST": environ.setdefault("DB_HOST", "localhost"),
+        "PORT": environ.setdefault("DB_PORT", "5432"),
     }
 }
